@@ -45,7 +45,7 @@ const Footer = () => {
                     </div>
                   </form>
                 </div>
-                <div className="col third-section mt-5 mt-lg-0 ms-5 ps-5">
+                <div className="col third-section mt-5 mt-lg-0 ms-0 ps-0 ps-lg-5 ms-lg-5">
                   <h3>LINKS</h3>
                   <ul className="list">
                     <li>Become an Affiliate</li>
