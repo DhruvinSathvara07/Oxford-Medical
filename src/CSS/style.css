@@ -9,25 +9,25 @@
   --green: #007071;
   --off-black: #4d4d4d;
   --black: #353535;
+  --dark-green: rgb(154, 170, 32);
   /* fontfamily */
   --lato: "Lato", sans-serif;
+  --robato: "Roboto", sans-serif;
 }
 
 body {
   font-family: var(--lato) !important;
 }
 
-/* Navbar.css - Bootstrap 5.1.3 Responsive Navbar Styles */
-
 .navbar-custom {
-  background-color: #1ba3b8 !important;
-  padding: 8px 0 !important;
+  background-color: var(--green) !important;
+  padding: 25px 0 !important;
   min-height: 60px !important;
 }
 
 .navbar-brand-custom {
   background-color: white !important;
-  color: #1ba3b8 !important;
+  color: var(--green) !important;
   font-weight: bold !important;
   padding: 8px 16px !important;
   border-radius: 2px !important;
@@ -37,16 +37,18 @@ body {
 }
 
 .navbar-brand-custom:hover {
-  color: #1ba3b8 !important;
+  color: var(--green) !important;
   text-decoration: none !important;
 }
 
 .navbar-nav .nav-link {
   color: white !important;
+  /* font-weight: 500; */
+  font-family: var(--robato) !important;
   padding: 8px 16px !important;
   font-size: 14px !important;
   white-space: nowrap !important;
-  transition: background-color 0.2s ease !important;
+  transition: all.2s ease !important;
 }
 
 .navbar-nav .nav-link:hover {
@@ -56,6 +58,7 @@ body {
 }
 
 .search-container {
+  border: none !important;
   position: relative !important;
   display: flex !important;
   align-items: center !important;
@@ -63,7 +66,7 @@ body {
 
 .search-input {
   background-color: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border: none !important;
   color: white !important;
   padding: 6px 30px 6px 8px !important;
   font-size: 14px !important;
@@ -105,7 +108,7 @@ body {
   white-space: nowrap !important;
   padding: 4px 8px !important;
   border-radius: 3px !important;
-  transition: background-color 0.2s ease !important;
+  transition: all 0.2s ease !important;
 }
 
 .user-link:hover {
@@ -135,7 +138,7 @@ body {
 
 /* Offcanvas customization */
 .offcanvas-custom {
-  background-color: #1ba3b8 !important;
+  background-color: var(--green) !important;
   border: none !important;
 }
 
@@ -310,17 +313,315 @@ body {
   line-height: 1.3 !important;
 }
 
-/* Section 6 CSS */
+/* Section3 CSS */
+.promotion-section {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--lato);
+  padding: 50px 5vw;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background: url(../../public/img/promotionsection.jpg) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
 
+.promotion-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.promotion-section h3 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.promotion-section h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.promotion-section h2 span {
+  color: #f53803;
+}
+
+.promotion-section .btn-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.promotion-section button {
+  background-color: #bdcf2f;
+  max-width: 100%;
+  width: 90%;
+  max-width: 600px;
+  font-size: 1rem;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: background-color 0.3s linear;
+}
+
+.promotion-section button a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  transition: color 0.3s linear;
+}
+
+.promotion-section button:hover {
+  background-color: var(--dark-green);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .promotion-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .promotion-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .promotion-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .promotion-section button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-section {
+    padding: 40px 4vw;
+  }
+
+  .promotion-section h1 {
+    font-size: 2rem;
+  }
+
+  .promotion-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .promotion-section h2 {
+    font-size: 1rem;
+  }
+
+  .promotion-section button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Section 6 CSS */
 .omi-products {
-  padding: 50px 80px !important;
+  padding: 50px 80px;
 }
 
 .title-header {
-  font-weight: 500 !important;
-  font-size: 34px !important;
-  color: var(--black) !important;
+  font-weight: 500;
+  font-size: 34px;
+  color: #000;
+  text-align: center;
 }
+
+.mainproducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 25px;
+  background: white;
+  position: relative;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-saving-badge {
+  background: #dc3545;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.price-info {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.shipping-info {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  background: #1a6b5c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #145449;
+  color: white;
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 120px;
+}
+
+.left-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.inhaler-device {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  bottom: 10px;
+}
+
+
+
+@media (max-width: 992px) {
+  .omi-products {
+    padding: 40px 40px;
+  }
+
+  .mainproducts {
+    gap: 30px;
+  }
+
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .product-title {
+    white-space: normal;
+  }
+
+  .product-image {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .omi-products {
+    padding: 30px 20px;
+  }
+
+  .title-header {
+    font-size: 28px;
+  }
+
+  .buy-btn {
+    width: 100%;
+  }
+
+  .product-image {
+    height: auto;
+  }
+}
+
+/* 
+.inhaler-device::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #666;
+  border-radius: 50%;
+} */
+/* 
+.inhaler-device::after {
+  content: 'HIMALAYAN';
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6px;
+  color: #666;
+  text-align: center;
+  line-height: 1.2;
+  width: 60px;
+} */
+
+/* .salt-crystals {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+  width: 40px;
+  height: 20px;
+  background: radial-gradient(circle, #fff 30%, #f0f0f0 70%);
+  border-radius: 50% 30% 50% 30%;
+  opacity: 0.8;
+} */
 
 @media (max-width: 768px) {
   .text-container h1 {

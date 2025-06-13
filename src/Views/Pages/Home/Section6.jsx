@@ -1,15 +1,49 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import Productcard from "../../Components/Productcard/Productcard";
+import axios from "axios";
 const Section6 = () => {
+  const [productdata, setProductdata] = useState([]);
+
+  const fetchingData = async () => {
+    try {
+      const response = await axios.get("./JSON/Productcard.json");
+      setProductdata(response.data.productcardData);
+      // console.log(response.data.productcardData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchingData();
+  }, []);
+
   return (
-    <div className="omi-products">
-      <div className="container-fluid">
-        <div className="title-header">
+    <section>
+      <div className="omi-products">
+        <div className="container-fluid">
           <h1>All OMI Products</h1>
+          <div className="border border-5-dark"></div>
+          <div className="mt-5 mainproducts">
+            {productdata.map((item) => {
+              return (
+                <Productcard
+                  key={item.id}
+                  product_badge={item.product_badge}
+                  producttitle1={item.producttitle1}
+                  producttitle2={item.producttitle2}
+                  price={item.price}
+                  shippinginfo1={item.shippinginfo1}
+                  shippinginfo2={item.shippinginfo2}
+                  btntext={item.btntext}
+                  img={item.img}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="border border-dark"></div>
       </div>
-    </div>
+    </section>
   );
 };
 
