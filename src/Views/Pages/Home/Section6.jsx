@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Productcard from "../../Components/Productcard/Productcard";
+import TrendingProducts from "../../Components/TrendingProducts/TrendingProducts";
 import axios from "axios";
+
 const Section6 = () => {
-  const [productdata, setProductdata] = useState([]);
+  const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
 
   const fetchingData = async () => {
     try {
-      const response = await axios.get("./JSON/Productcard.json");
-      setProductdata(response.data.productcardData);
-      // console.log(response.data.productcardData);
+      const response = await axios.get("./JSON/TrendingProducts.json");
+      setData(response.data.trendingproduct);
+      setData2(response.data.trendingproduct2);
     } catch (error) {
       console.log(error);
     }
@@ -19,28 +21,47 @@ const Section6 = () => {
   }, []);
 
   return (
-    <section>
-      <div className="omi-products">
-        <div className="container-fluid">
-          <h1>All OMI Products</h1>
-          <div className="border border-5-dark"></div>
-          <div className="mt-5 mainproducts">
-            {productdata.map((item) => {
-              return (
-                <Productcard
-                  key={item.id}
-                  product_badge={item.product_badge}
-                  producttitle1={item.producttitle1}
-                  producttitle2={item.producttitle2}
-                  price={item.price}
-                  shippinginfo1={item.shippinginfo1}
-                  shippinginfo2={item.shippinginfo2}
-                  btntext={item.btntext}
-                  img={item.img}
-                />
-              );
-            })}
-          </div>
+    <section className="py-4">
+      <div className="omi-products container">
+        <h1>Our Trending Product</h1>
+        <div className="border border-5-dark"></div>
+        <div className="row mt-5">
+          {data.map((item) => (
+            <div className="col-md-4 mb-4" key={item.id}>
+              <TrendingProducts
+                roundtext={item.roundtext}
+                img={item.img}
+                card_title={item.card_title}
+                card_text={item.card_text}
+                card_price={item.card_price}
+                card_price_two={item.card_two_pric}
+                line1={item.line1}
+                line2={item.line2}
+                btn_text={item.btn_text}
+                text1={item.text1}
+                text2={item.text2}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="row mt-5">
+          {data2.map((item) => (
+            <div className="col-md-4 mb-4" key={item.id}>
+              <TrendingProducts
+                roundtext={item.roundtext}
+                img={item.img}
+                card_title={item.card_title}
+                card_text={item.card_text}
+                card_price={item.card_price}
+                card_price_two={item.card_two_pric}
+                line1={item.line1}
+                line2={item.line2}
+                btn_text={item.btn_text}
+                text1={item.text1}
+                text2={item.text2}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

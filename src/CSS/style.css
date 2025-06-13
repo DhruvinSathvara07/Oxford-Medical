@@ -10,6 +10,8 @@
   --off-black: #4d4d4d;
   --black: #353535;
   --dark-green: rgb(154, 170, 32);
+  --red: #f53803;
+
   /* fontfamily */
   --lato: "Lato", sans-serif;
   --robato: "Roboto", sans-serif;
@@ -322,7 +324,7 @@ body {
   align-items: center;
   font-family: var(--lato);
   padding: 50px 5vw;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin-bottom: 10px;
   background: url(../../public/img/promotionsection.jpg) no-repeat center center;
   background-size: cover;
@@ -350,7 +352,7 @@ body {
 }
 
 .promotion-section h2 span {
-  color: #f53803;
+  color: var(--red) !important;
 }
 
 .promotion-section .btn-container {
@@ -384,7 +386,47 @@ body {
   background-color: var(--dark-green);
 }
 
-/* Media Queries for responsiveness */
+.healthbanner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.healthbanner2 {
+  height: 60px !important;
+  background: url('/img/banner.png') no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 992px) {
+  .healthbanner2 {
+    min-height: 110px;
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  .healthbanner2 {
+    min-height: 200px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .healthbanner2 {
+    min-height: 180px;
+    font-size: 22px;
+    padding: 1rem;
+  }
+
+  .healthbanner2 .header {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
 @media (max-width: 768px) {
   .promotion-section h1 {
     font-size: 2.5rem;
@@ -427,7 +469,95 @@ body {
   }
 }
 
-/* Section 6 CSS */
+/* Section 4 CSS */
+.promotion {
+  font-family: var(--lato);
+  background: url(../../public/img/promotionsection.jpg) no-repeat center center;
+  background-size: cover;
+  /* border-radius: 20px; */
+  padding: 50px;
+  text-align: center;
+}
+
+.promotion h3,
+.promotion h2 {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.promotion h3 {
+  font-size: 34px;
+}
+
+.promotion h2 {
+  font-size: 30px;
+}
+
+.promotion h3 span,
+.promotion h2 span {
+  color: var(--red);
+}
+
+.promotion-btn {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.promotion button {
+  width: 100%;
+  max-width: 815px;
+  font-size: 17px;
+  border-radius: 50px;
+  background-color: var(--dark-green);
+  padding: 10px 20px;
+}
+
+.promotion button a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .promotion h3 {
+    font-size: 22px;
+  }
+
+  .promotion h2,
+  .text-two {
+    font-size: 20px;
+  }
+
+  .promotion button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .promotion button a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion {
+    padding: 20px;
+  }
+
+  .promotion h3,
+  .promotion h2,
+  .text-two {
+    font-size: 18px;
+  }
+
+  .promotion button {
+    font-size: 14px;
+  }
+}
+
+/* Section 5 CSS */
 .omi-products {
   padding: 50px 80px;
 }
@@ -538,8 +668,6 @@ body {
   bottom: 10px;
 }
 
-
-
 @media (max-width: 992px) {
   .omi-products {
     padding: 40px 40px;
@@ -586,43 +714,6 @@ body {
   }
 }
 
-/* 
-.inhaler-device::before {
-  content: '';
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
-  background: #666;
-  border-radius: 50%;
-} */
-/* 
-.inhaler-device::after {
-  content: 'HIMALAYAN';
-  position: absolute;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 6px;
-  color: #666;
-  text-align: center;
-  line-height: 1.2;
-  width: 60px;
-} */
-
-/* .salt-crystals {
-  position: absolute;
-  bottom: -10px;
-  right: -15px;
-  width: 40px;
-  height: 20px;
-  background: radial-gradient(circle, #fff 30%, #f0f0f0 70%);
-  border-radius: 50% 30% 50% 30%;
-  opacity: 0.8;
-} */
-
 @media (max-width: 768px) {
   .text-container h1 {
     font-size: 40px !important;
@@ -650,4 +741,124 @@ body {
   .products h1 {
     font-size: 30px !important;
   }
+}
+
+/* Section 6 CSS */
+.badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  align-self: self-end;
+  background-color: #e4040e !important;
+}
+
+.card {
+  border: 1px solid var(--dark-green) !important;
+  border-radius: 10px !important;
+}
+
+.btn-teal {
+  max-width: 180px !important;
+  padding: 10px !important;
+  background-color: var(--green) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn-teal:hover {
+  background-color: #005f56 !important;
+}
+
+/* Footer section */
+.footer {
+  border-top: 1.5px solid #000;
+  padding: 50px !important;
+}
+
+.footersection img {
+  width: 225px;
+  height: 213px;
+}
+
+.second-section .title {
+  font-size: 25px !important;
+  color: var(--green);
+  font-weight: bold !important;
+}
+
+.second-section p {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  margin: 0 0 1em !important;
+}
+
+.email-input {
+  width: 100%;
+  max-width: 380px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.go-button {
+  max-width: 380px !important;
+  background-color: var(--green) !important;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.third-section h3 {
+  color: var(--green) !important;
+  font-size: 25px !important;
+}
+
+.list {
+  position: relative;
+  left: -30px !important;
+}
+
+.payment {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment>.col-xs-4 {
+  float: none !important;
+  display: flex;
+  justify-content: center;
+}
+
+.third-section ul li {
+  list-style-type: none !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.title-line {
+  height: 59px !important;
+  padding: 10px !important;
+  font-weight: 500 !important;
+  background-color: var(--green) !important;
+  font-size: 16px !important;
 }
