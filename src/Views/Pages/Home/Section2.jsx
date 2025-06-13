@@ -8,8 +8,8 @@ const Section2 = () => {
   const fetchingData = async () => {
     try {
       const response = await axios.get("./JSON/Card.json");
-      setData(response.data.cardData); // Set the full array
-      console.log(response.data.cardData);
+      setData(response.data.cardData);
+      // console.log(response.data.cardData);
     } catch (error) {
       console.log(error);
     }
@@ -21,22 +21,24 @@ const Section2 = () => {
 
   return (
     <>
-      <div className="container-fluid products">
-        <h1 className="text-center mt-5 mt-md-0 mt-lg-0">We Manufacture</h1>
-        <div className="product-section">
-          <div className="container-fluid">
-            <div className="product-container d-flex justify-content-center gap-2 gap-lg-5 flex-wrap mt-4">
-              {data.map((item) => (
-                <Card
-                  key={item.id}
-                  card_img={item.cardimg}
-                  card_text={item.cardtext}
-                />
-              ))}
+      <section>
+        <div className="container-fluid products">
+          <h1 className="text-center mt-5 mt-md-0 mt-lg-0">We Manufacture</h1>
+          <div className="product-section">
+            <div className="container-fluid">
+              <div className="product-container d-flex justify-content-center gap-2 gap-lg-5 flex-wrap mt-4">
+                {data.map((item) => (
+                  <Card
+                    key={item.id}
+                    card_img={item.cardimg}
+                    card_text={item.cardtext}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
