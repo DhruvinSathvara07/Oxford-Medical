@@ -8,7 +8,6 @@ const Section5 = () => {
     try {
       const response = await axios.get("./JSON/Productcard.json");
       setProductdata(response.data.productcardData);
-      // console.log(response.data.productcardData);
     } catch (error) {
       console.log(error);
     }
@@ -21,9 +20,9 @@ const Section5 = () => {
   return (
     <section>
       <div className="omi-products">
-        <div className="container-fluid">
-          <h1>All OMI Products</h1>
-          <div className="border border-5-dark"></div>
+        <h1>All OMI Products</h1>
+        <div className="border border-5-dark"></div>
+        <div className="container">
           <div className="mt-5 mainproducts">
             {productdata.map((item) => {
               return (
