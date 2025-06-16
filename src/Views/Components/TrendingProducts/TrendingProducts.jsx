@@ -38,7 +38,7 @@ const TrendingProducts = ({
 
         <button className="btn btn-teal w-100 mb-3 mt-2">{btn_text}</button>
 
-        <div className="d-flex justify-content-center gap-3 pt-2">
+        <div className="d-flex justify-content-center gap-0 gap-md-0 gap-lg-3 pt-2">
           <span className="text-muted small">
             <i className="bi bi-circle"></i> {text1}
           </span>
