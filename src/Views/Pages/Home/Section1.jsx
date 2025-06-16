@@ -4,7 +4,7 @@ const Section1 = () => {
   return (
     <>
       <section>
-        <div className="container-fluid main-section">
+        <div className="container-fluid main-section mt-5">
           <div className="about">
             <div className="">
               <div className="text-container">

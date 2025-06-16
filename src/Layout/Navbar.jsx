@@ -120,7 +120,7 @@ const Navbar = () => {
             </ul>
 
             {/* Right Section - Desktop */}
-            <div className="d-flex align-items-center gap-3">
+            <div className="d-flex align-items-center gap-3" id="right-section">
               <div className="search-container">
                 <span className="search-icon" onClick={handleSearch}>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -134,7 +134,6 @@ const Navbar = () => {
                 />
               </div>
 
-              {/* User Section */}
               <div className="user-section">
                 <a
                   href="#"
