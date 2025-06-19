@@ -240,12 +240,12 @@ body {
   padding: 20px;
 }
 
-.slider-right {
+/* .slider-right {
   background: url(../../public/img/Slider.png) no-repeat center center !important;
   background-size: cover;
   background-position: center;
   min-height: 400px;
-}
+} */
 
 .slider-left {
   display: flex;
