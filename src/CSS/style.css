@@ -383,14 +383,14 @@ body {
   padding: 50px 80px !important;
 }
 
-.about {
+/* .about {
   padding: 10px !important;
   height: 559px !important;
   color: var(--white) !important;
   background: url(../../public/img/Frame.jpg) no-repeat center center !important;
   background-size: cover !important;
   border-radius: 50px !important;
-}
+} */
 
 .text-container {
   padding: 55px !important;
