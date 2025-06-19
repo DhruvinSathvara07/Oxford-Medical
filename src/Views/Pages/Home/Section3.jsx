@@ -17,6 +17,7 @@ const Section3 = () => {
           <div className="btn-container">
             <button className="mt-0 mt-lg-3">
               <a href="#">OMI PEMF BEYOND PRODUCT LINE</a>
+              <a href="#">OMI PEMF BEYOND PRODUCT LINE</a>
             </button>
           </div>
         </div>
