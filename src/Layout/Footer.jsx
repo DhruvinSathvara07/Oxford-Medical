@@ -18,7 +18,7 @@ const Footer = () => {
                   <form>
                     <label className="title">MAILING LIST</label>
                     <p>
-                      Sign Up For Information On New Developments, <br />{" "}
+                      Sign Up For Information On New Developments, <br />
                       Special Offers And Outstanding Opportunities!
                     </p>
                     <div className="d-flex flex-column">

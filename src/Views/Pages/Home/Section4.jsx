@@ -6,11 +6,15 @@ const Section4 = () => {
       <section>
         <div className="container-fluid main-section">
           <div className="promotion text-center">
-            <h3 className="mt-2">
-              Own a high quality,Full Functionality OMI PEMF Full Body Mat for
-              just <span>$1250</span>, <br /> with promotional Upgrade to the
-              OMI PEMF Beyond <br /> Including FedEx worldwide Delivery
+            <h3 className="mt-2 header-text">
+              <p>
+                Own a high quality, Full Functionality OMI PEMF Full Body Mat
+                for just <span>$1250</span>,
+              </p>
+              <p>with promotional Upgrade to the OMI PEMF Beyond</p>
+              <p>Including FedEx worldwide Delivery</p>
             </h3>
+
             <h2 className="mt-4">
               Now We Give a Free OMI PEMF Medallion worth of <span>$180</span>
               To all PEMF Full <br /> Body Mats & PEMF Packges
@@ -19,8 +23,12 @@ const Section4 = () => {
             <div className="d-flex justify-content-center promotion-btn mt-4">
               <button>
                 <a href="#">
-                  OMI PEME FULL BODY MATE WITH PROMOTIONAL <br />
-                  UPGRAD TO OMI PEME BEYOND
+                  <span style={{ display: "block" }}>
+                    OMI PEME FULL BODY MATE WITH PROMOTIONAL
+                  </span>
+                  <span style={{ display: "block" }}>
+                    UPGRAD TO OMI PEME BEYOND
+                  </span>
                 </a>
               </button>
             </div>
